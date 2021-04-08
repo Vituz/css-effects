@@ -1,0 +1,76 @@
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.square{
+    width: 300px;
+    height: 300px;
+    background-color: tomato;
+    transition: all 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square:hover{
+    cursor: pointer;
+    background-color: violet;
+    width: 500px;
+    border-radius: 10px;
+}
+
+
+/* ANIMATIONS */
+
+.square-2{
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    animation: move 6s infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes move{
+    0% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: yellow;
+        top: 0;
+        left: calc(100% - 300px);
+        border-radius: 25%;
+        width: 300px;
+    }
+
+    50% {
+        background-color: rgb(38, 0, 255);
+        top: calc(100% - 300px);
+        left: calc(100% - 300px);
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+    }
+
+    75% {
+        background-color: violet;
+        top: calc(100% - 400px);
+        left: 0;
+        border-radius: 25%;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+    }
+
+    100% {
+        background-color: brown;
+        top: 0;
+        left: 0;
+    }
+}
